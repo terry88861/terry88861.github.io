@@ -17,62 +17,6 @@ body {
   padding: 25px 0px;       /* --- Center Vertically - Using padding --- */
 }
 
-#header_flex {             /* --- Center Vertically - Using flex  --- */ 
-                           /* --- box-sizing: border-box; set width/height including the padding & border --- */
-  height: 83px;            /* --- height: 83px;  --- */
-  display: flex;           /* --- Center Vertically - Using flex     --- */ 
-  justify-content: center; /* ---                   .                --- */
-  align-items: center;     /* ---                   .                --- */
-}
-#header_lineht {           /* --- Center Vertically - Using line-height  --- */ 
-  line-height: 83px; 
-  height: 83px;            /* --- height: 83px;  --- */
-  text-align: center;      /* --- Center horizontally  --- */
-}
-     #header_lineht h2 {        /* --- Center Vertically - Using line-height  --- */ 
-        display: inline;        /* --- h2, h3 <tag> is a block element by defualt ---*/   
-        line-height: inherit ;  /* --- line-height: 1.5 ;  --- */       
-        vertical-align: middle; /* --- h2, h3 <tag> is a block element by defualt ---*/
-      }
-
-#header_transY {
-  text-align: center;       /* --- Center horizontally  --- */
-  height: 83px;             /* --- height: 83px;  --- */
-}
-     #header_transY h2 { 
-       display: inline-block ;   /* --- display: inline ; --- */              
-       margin: 0px ;
-        /* --- one --- */        /* --- Center Vertically - Using transform --- */
-       position: relative;    
-       top: 50%;                
-       -webkit-transform: translateY(-50%);  /* --- for chrome --- */
-       -ms-transform: translateY(-50%);      /* --- for MS IE, Edge --- */
-       transform: translateY(-50%);
-                                 /* --- Center Vertically - Using transform --- */
-     }
-      
-#header_transXY {
-      height: 83px;              /* --- height: 83px;  --- */
-      position: relative;  
-}
-     #header_transXY h2 {
-       display: inline-block ;   /* --- display: inline ; --- */              
-       margin: 0px ;
-       /* --- two --- */         /* --- Center Vertically & horizontally - Using transform --- */
-       position: absolute;  
-       top: 50%;
-       left: 50%;     
-       -webkit-transform: translate(-50%, -50%);  /* --- for chrome --- */
-       -ms-transform: translate(-50%, -50%);      /* --- for MS IE, Edge --- */
-       transform: translate(-50%, -50%);
-                                /* --- Center Vertically & horizontally - Using transform --- */
-     }
-
-
-#nav-bar {
-   height: 50px;
-}
-
 #nav-bar2 ul {             /* 設定#nav-bar2 之 UL 使用相同的 base class, 但取消了 height 限定  */
   background-color: rgb(35, 4, 70);
   padding: 10px 0px;
@@ -168,50 +112,6 @@ h3 {
     }
    
 
-
-dt {
-  color :rgb(0, 0, 150) ;
-  background-color:rgb(238, 238, 58) ;
-  font-weight: bold;
-  display: inline-block;
-  font-size: 110%;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  padding: 3px 5px;
-  box-shadow: 4px 3px 5px grey;
-}
-#wk_header dt {
-  text-decoration: underline;
-}
-#wk_header dt:hover {
-  background-color: rgb(185, 221, 238);
-  text-decoration: none;
-}
-#wk_header dt a:hover {
-  background-color: rgb(185, 221, 238) ;
-  color: white;
-  text-shadow: 2px 2px 1px brown ;
-  text-decoration: none;
-}
-
-.list {                      /* --- Center Vertically & horizontally - Using Flex --- */
-   display: flex; 
-   align-items: center; 
-   justify-content:center;
-}
-   .list.column {
-      list-style-type: none ;
-      display: inline-block;
-      margin: 0px;
-      padding-right: 50px;
-      padding-left: 50px;
-      /* ---
-         float: left;             --- display: inline-block; ---   
-         box-sizing: border-box; 
-         width: 50%;
-         --- 
-      */
-    }
 ul.sidebar{
   list-style-type: none ;
 }
@@ -336,14 +236,6 @@ mark.red {
          width: 300px;
     }
 
-.sideright.bar3 {
-   box-sizing: border-box; 
-   width: 23%;
-}
-.main.bar3 {
-   box-sizing: border-box;  
-   width: 72%;
-}
 /* Create two unequal columns that floats next to each other */
 .column {
   border-radius: 8px;
