@@ -6,71 +6,81 @@
     <link rel="stylesheet" href="./Css/index.css"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        
+    
     </style>
   </head>
     
   <body>                                     <!-- id="header" Center Vertically - Using padding -->
       <div class="base" id="header">         
           <h2 class="hd">退休大叔的學習筆記</h2>  
-          <h3 class="hd">于 2021.09 月</h3>   <!-- Right Align :class="hd_float" 使用 float -->
+          <h3 class="hd">于 2021.10 月</h3>   <!-- Right Align :class="hd_float" 使用 float -->
       </div>                                  <!-- Right Align :class="hd" 使用 position -->
-
-      <!--  Center Vertically - Using transform -- 
-          <div class="base" id="header_transY" >   
-              <h2 >退休大叔的學習筆記 Y about CSS Layout (二) </h2>  
-              <h3 class="hd">于 2021.09 月</h3>     -- <h3 class="hd_float"> --
-          </div>
-      -->
-      <!--  Center Vertically - Using transform -- 
-          <div class="base" id="header_transXY" >    
-              <h2 >退休大叔的學習筆記 XY about CSS Layout (二) </h2>  
-              <h3 class="hd_float">于 2021.09 月</h3>    -- <h3 class="hd_float"> -- 
-          </div>
-      -->
 
                             <!--  設定 #nav-bar2 之 UL使用相同的 base class -->       
       <div id="nav-bar2" >  <!--  但取消了 height 限定 --> 
           <ul class="base">
               <li><a href="#HTML&CSS" title="go to the HTML&CSS section"> HTML&CSS </a></li>
-              <li><a href="#Git&Github" title="go to the Git&Github section"> Git&Github </a>
+              <li><a href="#construction" title="go to the Git&Github section"> Git&Github </a>
               </li>
-              <li><a href="#Javascript" title="go to the Javascript section"> Javascript </a>
+              <li><a href="#construction" title="go to the Javascript section"> Javascript </a>
               </li>
-              <li><a href="#Jquery" title="go to the Jquery section"> Jquery </a>
-              <li><a href="#Bootstrap" title="go to the Python section"> Bootstrap </a>
+              <li><a href="#construction" title="go to the Jquery section"> Jquery </a>
+              <li><a href="#construction" title="go to the Python section"> Bootstrap </a>
               </li>
               </li>
-              <li><a href="#Python" title="go to the Python section"> Python </a>
+              <li><a href="#construction" title="go to the Python section"> Python </a>
               </li>
-
           </ul>
       </div>
 
  <!--      
          Try another way to do this main cotent and sidebar and see what is the different ?! 
          Adding the sidebar element (三) Create unequal Columns
+         width="368" height="480" 
       -->
-     <div class="main row" id="HTML&CSS">
-         <div class="column right">
-             <h4> This sidebar 4 is placed inside the new "main row" div container </h4>
-             <strong> sidebar4 元素使用百分比 來設定其 width </strong>
-             <ul class="sidebar">
-                <li><a href="./layout_1.html" target="_blank"> about CSS Layout</a></li>
-                <li> position_float </li>
-                <li> selector </li>
-                <li> dropdown menu </li>
-               
-             </ul>
-         </div>
+      <div class="main" id="aboutme">
+          <video controls autoplay muted>
+            <source src="./img/mypic.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+      </div>
 
-         <div class="column left">
-            <h3> HTML&CSS </h3>
-            <p> <h3>注意事項：</h3> 
-            </p>
+     <div class="main row" id="HTML&CSS">
+        <div class="column left">
+            在學習中完成下列的練習, 
             <br>
-         </div> 
-     </div>      
+            <strong> 點擊連結可在新頁面顯示 :</strong>
+            <ul class="sidebar">
+               <li> iframe & sandbox </li>
+               <li><a href="./layout_1.html" target="right_ifm"> about CSS Layout</a></li>
+               <li> position_float </li>
+               <li> selector </li>
+               <li> dropdown menu </li>
+               <li> Media queries </li>
+            </ul>
+        </div>
+
+        <div class="column right">
+           <h3> HTML&CSS </h3>
+           <p> <h3>注意事項：</h3> 
+               <iframe name="right_ifm" width="100%" height="80%" frameborder="0"></iframe>
+           </p>
+           <br>
+        </div> 
+     </div> 
+
+     <div class="main row" id="construction">
+        <div class="column left">
+            <img src="./img/layout/child_pray01.png"  alt="./img/layout/child_pray01.png not found">
+        </div>
+
+        <div class="column right" style="text-align: center;" >
+            <p> </p>
+               <h2> Sorry under construction </h2>
+               <h2 style="color: black;"> 尚待建構中。。。</h2> 
+               <h2> <mark class="red"> Coming soon。。。</mark></h2> 
+        </div> 
+     </div> 
 
       <div class="base" id="footer2">
           <h5 style="margin: 0px; padding: 15px; color: brown;">&copy;copyright 2021 退休大叔的學習筆記</h5>

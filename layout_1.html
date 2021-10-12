@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="Terry Wang">
     <link rel="stylesheet" href="./Css/layout.css"> 
+    <link rel="stylesheet" media="(max-width: 700px)" href="./Css/layout_media.css"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         
@@ -254,7 +255,7 @@
           <img src=".\img\layout\layout_C40.png" alt="layout_C40.png files not found" > 
       </div>
 
-      <div class="sideright"> <!-- setting the sidebar 1 element -->
+      <div class="sideright" id="SD_bar1"> <!-- setting the sidebar 1 element -->
           <h4> This sidebar 1 is placed before "Adding additional content panels" main div</h4>
           <strong>sidebar1 元素使用 pixels 來設定其 width </strong>
           <ul class="sidebar">
@@ -266,10 +267,9 @@
           </ul>
       </div>
     
-      <div class="sideright"> <!-- setting the sidebar 2 element --> 
+      <div class="sideright" id="SD_bar2"> <!-- setting the sidebar 2 element --> 
           <h4> This sidebar 2 is placed before "Adding additional content panels" main div </h4>
           <strong> sidebar2 元素使用 pixels 來設定其 width </strong>
-
           <ul class="sidebar">
               <li><a href="https://www.youtube.com/watch?v=1GNGtLbRyI4&list=PLr6-GrHUlVf_HUfo4LyFepGmj23nwqNdk&index=96" target="_blank"> 06 - Adding additional content panels</a></li>
               <li><a href="https://www.youtube.com/watch?v=w4x3tRr5cx4&list=PLr6-GrHUlVf_HUfo4LyFepGmj23nwqNdk&index=97" target="_blank"> 07 - Image sidebar</a></li>
@@ -278,8 +278,8 @@
               <li><a href="https://www.youtube.com/watch?v=ZiOO-e76ToA&list=PLr6-GrHUlVf_HUfo4LyFepGmj23nwqNdk&index=100 " target="_blank"> 10 - Organizing the stylesheet</a></li>
           </ul>
       </div>
-
-      <div class="main" style="margin-right: 350px;" > <!-- Adding additional content panels -->
+ 
+      <div class="main LF_main" > <!-- Adding additional content panels -->
           <h3>Adding additional content panels </h3>
           <p> <h3>注意事項：</h3>
               <dl>
@@ -291,7 +291,6 @@
                       若 sidebar2 元素(在本例中也設為 float:right)<mark class="red">不設置 clear property</mark> , sidebar2 也會往上懸浮, 並向 browser 的右邊界移動, <mark>緊臨在 sidebar1 的左邊, 兩者呈現左右橫向排列</mark>.
                       <br>
                       若 sidebar2 元素<mark class="red">設置了 clear:right property</mark>(clear 方向應與前一個floating element float的方向一致相同) , sidebar2 同樣會往上懸浮, 並向 browser 的右邊界移動, <mark>但會改變成緊臨在 sidebar1 的下方, 兩者呈現上下縱向 top-down 排列</mark>.
-
 
                   </dd>
               </dl>
@@ -321,7 +320,7 @@
           <img src=".\img\layout\layout_D09_2.png" alt="layout_D09_2.png files not found" >
 
       </div>
-
+ 
       <!-- Adding the sidebar element (二) 使用 width: 23%百分比 -->
       <div class="sideright bar3" > <!-- setting the sidebar 3 element -->
           <h4> This sidebar 3 is placed before "Adding Image sidebar" main div </h4>
@@ -393,7 +392,7 @@
            </a>
       </div>
 
-      <!--      
+      <!--       
          Try another way to do this main cotent and sidebar and see what is the different ?! 
          Adding the sidebar element (三) Create unequal Columns
       -->
@@ -510,7 +509,7 @@
               </div>
       </div>
       
-      <div class="sideright"> <!-- setting the image sidebar5 element --> 
+      <div class="sideright" id="SD_bar5"> <!-- setting the image sidebar5 element --> 
         <h4> This sidebar 5 is placed before "Add an image sidebar5 and some effects" main div </h4>
         <strong> sidebar5 元素使用 pixels 來設定其 width </strong>
 
@@ -527,7 +526,7 @@
            <img class="img_sidebar" src=".\img\layout\child_pray02.png" alt="child_pray02.png file not found !">
       </div>
 
-      <div class="main" style="margin-right: 350px;">   <!-- Add an image sidebar and some effects -->
+      <div class="main LF_main">   <!-- Add an image sidebar and some effects -->
           <h3>Add an image sidebar and some effects</h3>
           <p> <h3>注意事項：</h3>
              <dl>

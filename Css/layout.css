@@ -110,6 +110,9 @@ body {
   padding: 20px;
   margin: 30px;
 }
+   #LF_main1 {
+      margin-right: 350px;
+   }
 
 #footer {
   height: 60px;
@@ -374,16 +377,84 @@ mark.red {
        makes the three columns stack on top of each other instead of next to each other 
    --- 
 */
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 700px) {
+     body {
+       font-size: 12px;
+     }
+     .base {
+      margin:  5px 10px;
+      border-radius: 5px;
+     }
+ 
+     h2 {
+      font-size: 170%; 
+     }
+     h2.hd {                    /* --- h2, h3 <tag> is a block element by defualt ---*/
+      display: block;        /* --- display: inline-block ; ---*/
+     }
+     h3 {
+      font-size: 115%;  
+     }
+     h3.hd {                   /* --- Left and Right Align - Using position --- */
+      padding-top: 3px;     /* --- Center Vertically - Using padding --- */                       
+     }
+    
+
+    .main {
+      font-size: 100%;
+      border-radius: 8px;
+      padding: 5px;
+      margin: 10px;
+    }
+
+    #SD_bar1, #SD_bar2, #SD_bar5 {
+       display: none;
+    }
+
+    .LF_main {
+      margin-right: 10px;
+    }
+
+    .sideright.bar3 {
+       box-sizing:content-box ;
+       width: 95%;
+       padding: 5px;
+       margin: 10px 0px;
+       margin-left: auto;
+       margin-right: auto;
+       float: none;
+    }
+    .main.bar3 {
+       box-sizing:content-box ;
+       width: 95%;
+       padding: 5px;
+       margin: 10px 0px;
+       margin-left: auto;
+       margin-right: auto;
+    }
+
+    .img_sidebar {
+      margin-left: auto;
+      margin-right: auto;
+      padding: 5px;
+      border-radius: 5px;
+    
+      float: none ;
+      width: 94%;  /* ---  width: 280px + ( padding: 15px * 2 )  --- */
+      clear: both;       
+      opacity: 1.0;   /* --- transition: Change Several Property Values --- */
+      transition: opacity 2s ease-in-out, width 3s ;
+                      /* --- specifies the speed curve of the transition
+                             effect with a slow start and end --- */
+    }
+        .img_sidebar:hover { 
+          opacity: 0.3;
+          width: 90%;
+        }
+
     .column.right, .column.left {
         width: 100%;
-    }
-  /* --- Responsive layout ---
-    .main.bar3, .sideright.bar3 {
-        width: 92%;
-    }
-     ---  
-  */ 
+    } 
 }
 
 /* --- Responsive layout ---

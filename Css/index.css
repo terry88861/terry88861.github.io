@@ -113,7 +113,11 @@ h3 {
    
 
 ul.sidebar{
-  list-style-type: none ;
+  list-style-type: circle ;
+  padding-inline-start: 20px;
+}
+ul.sidebar li {
+  padding: 5px 5px ;
 }
  /* ---  text-overflow: ellipsis
    li {
@@ -122,16 +126,22 @@ ul.sidebar{
       text-overflow: ellipsis ;
     }
     ---
- */
+ 
    .sidebar li:hover {
        display: inline-block;
-       filter: drop-shadow( 3px 3px 5px black); 
-       background-color: rgb(176, 220, 180);
     }
+    */
    .sidebar li a:hover {
        color:  red;
        font-weight: bold;
-       font-size: large;
+       filter: drop-shadow( 3px 3px 5px black); 
+       background-color: rgb(176, 220, 180);
+       /* 
+       font-weight: bold;
+       font-size: large; 
+       filter: drop-shadow( 3px 3px 5px black); 
+       background-color: rgb(176, 220, 180);
+       */
     }
 
 img {           /* --- width: 80%; centerize the image and keep it RWD --- */
@@ -139,6 +149,12 @@ img {           /* --- width: 80%; centerize the image and keep it RWD --- */
     display: block;
     margin: auto;
     height: auto;
+}
+video {           /* --- width: 80%; centerize the image and keep it RWD --- */
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  height: auto;
 }
     figcaption {
         color:  rgb(26, 179, 26);
@@ -245,13 +261,13 @@ mark.red {
 }
 
 /* Create two unequal left and right column */
-.column.right {
+.column.left {
   background-color: rgb(190, 200, 235);
   font-size: 95%;
   width: 25%;
 }
 
-.column.left {
+.column.right {
   width: 75%;
 }
 
@@ -266,25 +282,49 @@ mark.red {
        makes the three columns stack on top of each other instead of next to each other 
    --- 
 */
-@media screen and (max-width: 940px) {
+@media (max-width: 700px) {
+  
+ body {
+   font-size: 12px;
+ }
+ .base {
+     margin:  5px 10px;
+     border-radius: 5px;
+ }
+ #header {                  /* --- Center horizontally &  Vertically  --- */ 
+  padding: 18px 0px;        /* --- Center Vertically - Using padding --- */
+} 
+ h2 {
+     font-size: 200%; 
+ }
+      h2.hd {               /* --- h2, h3 <tag> is a block element by defualt ---*/
+       display: block;      /* --- display: inline-block ; ---*/
+      }
+ 
+ h3 {
+     font-size: 115%;  
+ }
+      h3.hd {               /* --- Left and Right Align - Using position --- */
+       padding: 0px;        /* --- Center Vertically - Using padding --- */ 
+       margin: 0px;             
+      }
+     
+ .main {
+       font-size: 100%;
+       border-radius: 8px;
+       padding: 5px;
+       margin: 10px;
+ }
     .column.right, .column.left {
         width: 100%;
     }
-  /* --- Responsive layout ---
-    .main.bar3, .sideright.bar3 {
-        width: 92%;
-    }
-     ---  
-  */ 
 }
 
-/* --- Responsive layout ---
-@media screen and (max-width: 800px) {
-    h2.hd, h3.hd {
-       width: 100%;
-    }
-}
- --- */ 
+/* --- Responsive layout - 
+       @media screen and (max-width: 700px) { } 
+       @media (max-width: 700px) { } 
+   --- 
+*/
 
 
   
