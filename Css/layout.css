@@ -117,7 +117,16 @@ body {
 #footer {
   height: 60px;
   clear:both;
+  margin-bottom: 30px;
 }
+   #footer p {
+      padding: 5px;
+      margin: auto;
+   }
+      #footer p a {
+        color: red; 
+        font-size: larger;
+      }
 #footer2 {
   clear:both;
   text-align: center;
@@ -243,7 +252,7 @@ img {           /* --- width: 80%; centerize the image and keep it RWD --- */
     margin: auto;
     height: auto;
 }
-    figcaption {
+    figcaption { 
         color:  rgb(26, 179, 26);
         font-weight: bold;
         font-size: 120% ;

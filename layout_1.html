@@ -10,7 +10,7 @@
         
     </style>
   </head>
-    
+
   <body>
       <div class="base" id="header" >   <!-- id="header_flex" , id="header" -->
           <h2 class="hd">退休大叔的學習筆記 - about CSS Layout (一) </h2>  
@@ -23,7 +23,8 @@
 
       <div class="main"  > <!-- 本文主旨與學習資源 -->
           <h3>本文主旨與學習資源</h3>
-          <p>本文的主要目標是說明如何運用&lt;div>，&lt;h1~h6>，&lt;p> 等元素及其 CSS style property 屬性來建構常見的 web layout 網頁佈局。常見的網頁佈局通常包函 <strong>Header，Navigation menu，Content(Sidebar)，Main content，及最後的 Footer</strong>等，幾個主要 section。如下圖所示：
+          <p>
+              本文的主要目標是說明如何運用&lt;div>，&lt;h1~h6>，&lt;p> 等元素及其 CSS style property 屬性來建構常見的 web layout 網頁佈局。常見的網頁佈局通常包函 <strong>Header，Navigation menu，Content(Sidebar)，Main content，及最後的 Footer</strong>等，幾個主要 section。如下圖所示：
               <br>
               <br>
               <img src=".\img\layout\layout_A00.png" alt="layout_A00.png files not found" >
@@ -138,14 +139,14 @@
                            <mark class="red">答案是 350px =</mark> <mark>sidebar div 280px + sidebar 左右 padding 各(15px * 2) + margin-left 10px + margin-right 30px </mark>
                            &nbsp;&nbsp;於是 main 及 sidebar 在 container 里就能<mark class="red">邊靠著邊的由左而右</mark>橫排了.
                            <br>
+                       </dd>
                            <a target="_blank" href=".\img\layout\layout_C01.png" title="點擊打開原圖形檔layout_C01.png" >
                               <figure>
                                  <figcaption> Click the image below to zoom in </figcaption>
                                  <img class="shadow" src=".\img\layout\layout_C01.png"  alt="layout_C01.png files not found" 
                                  >
                               </figure>
-                           </a>
-                       </dd>
+                           </a> 
                        <br>
                   <dt> responsive website design : </dt>
                        <dd>
@@ -173,24 +174,24 @@
           </p>
           <img src=".\img\layout\layout_C06.png" alt="layout_C06.png files not found" >
               
-          <p>
+          <p>    <!-- the other issue is that the browser is always going to stretch -->
               the other issue is that the browser is always going to stretch this all the way to the right. 
               <br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So we have to actually <mark>move this “sideright” element in our HTML code and put it before the main element</mark>. so that this “sideright” will get rendered first, <mark class="red">it will float our sidebar over here(the main element) and then this element also then will fit the open space </mark><mark>because remember the side element is not in the flow</mark>. you will remember we talked about the flow in the last CSs series, this is not in the flow so <strong>this also will be side to side</strong>.
           </p>
 
-          <p>
+          <p>    <!-- so we're going to go ahead and move this sideright above the main div -->
               so we're going to go ahead and <strong>move this “sideright (Lecture Dates)” above the main div</strong> and voila it worked but we've got another problem, remember our floating sideright element isn't in the flow. so <mark class="red">think of it like it's floating above the page</mark>. the browser is doing exactly what it should do and paint this main div still and this “sideright (Lecture Dates)” element too. 
           </p>
           <img src=".\img\layout\layout_C16.png" alt="layout_C16.png files not found" >
 
-          <p>
+          <p>    <!-- since <strong>this “sideright (Lecture Dates)” is out of the flow -->
               since <strong>this “sideright (Lecture Dates)” is out of the flow</strong>, <mark class="red">it's just going to float right above this main div but we don't want that, we want our little gutter here of margin space</mark>. so <strong>the easiest way to do this is to move this main div back and then we'll have to make some space</strong> and we'll talk about a couple strategies that you can use. 
           </p>
           <img src=".\img\layout\layout_C19.png" alt="layout_C19.png files not found" >
 
           <br><br>
-          <p>   <!-- 在原來文件 Flow 的位置, 往上懸浮之後, 向左或向右移動 -->
+          <p>   <!-- float element : 在原來文件 Flow 的位置, 往上懸浮之後, 向左或向右移動 -->
              <mark class="red">float element : &nbsp;&nbsp;</mark>
                 <ol>
                    <li>
@@ -212,7 +213,7 @@
           </p>
           <br><br>
 
-          <p>
+          <p>   <!-- Now there're a couple things we can do. First is -->
               Now there're a couple things we can do. <strong>First is we could set a fixed length on our main pane but we don't want to do that</strong>, remember we want this to stretch all the way. If people resize our browser we want this thing to stretch right into our “sideright” element. So <mark class="red">we really don't want to set a fixed length here</mark> <mark>that kind of goes against the idea of a liquid website</mark>.
               <br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So <strong>we still have to make room for our sidebar</strong> and the way we do this is, we're going to use margins. <mark class="red">We're going to set a merge in here and push this margin all the way over, so we can fit our sidebar right into here</mark>. We'll go up to our main and we've got to play around with its margins. 
@@ -455,10 +456,10 @@
                   </a>
                   <br>
 
-                  <p>      <!--  about  content Property & ::before/::after selector-->
+                  <p>      <!--  about  content Property & ::before/::after selector -->
                       The <mark class="red">content Property</mark> : Used with the <mark>:before and :after pseudo-elements</mark>, to insert <strong>generated content</strong>. 
 
-                      <ul style="margin-left: 20px;">
+                      <ul >
                           <li> Use <mark class="red">The ::before selector</mark><mark> inserts something before</mark> the content of <strong>each selected element(s)</strong>.
                           </li>
 
@@ -467,10 +468,11 @@
 
                           <li>
                               <mark class="red">dot row(.row)</mark> means a class selector<br>
-                              <img src=".\img\layout\layout_D16.png" style="margin-left: 30px;" alt="layout_D16.png files not found" > 
                           </li>
                       </ul>
-                      <br><br>
+                      <img src=".\img\layout\layout_D16.png" alt="layout_D16.png files not found" > 
+                      <br>
+                      <br>
 
                       The <mark class="red">display property</mark> specifies <strong>the display behavior (the type of rendering box) of an element</strong>. The display Property Values : inline, block, inline-block, flex, grid, table .. etc. When display value is table, it means <mark>Let the element behave like a &lt;table> element</mark>.
                   </p>
@@ -644,7 +646,7 @@
       <div class="base" id="footer"> <!-- This will be a footer -->
            <h3>This will be a footer.</h3>
            <p>
-                 <a href="./layout_2.html" title="What's next ... " target="_self" style="color: red; font-size: larger; "><b>What's next ... 點擊進入 about CSS Layout (二)</b>
+                 <a href="./layout_2.html" title="What's next ... " target="_self" ><b>What's next ... 點擊進入 about CSS Layout (二)</b>
                  </a>
                  <br>
            </p>

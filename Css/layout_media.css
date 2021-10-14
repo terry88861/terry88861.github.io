@@ -84,5 +84,27 @@ h3 {
         width: 100%;
     } 
 
+@media (max-width: 600px) { 
+    
+    .list.column {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+   
+    #footer p {
+        text-indent: 10px;
+    }
+        #footer p a {
+           font-size: 110%;
+        }
+    
+    figcaption { 
+        font-size: 110% ;
+    }
+    img.float_right {
+        float: none; 
+        padding: 5px 0px;
+    }
 
+} 
   

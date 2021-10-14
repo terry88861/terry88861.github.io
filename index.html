@@ -10,8 +10,17 @@
     </style>
   </head>
     
-  <body>                                     <!-- id="header" Center Vertically - Using padding -->
-      <div class="base" id="header">         
+  <body>   
+      <script>
+          function showbutton() {
+              document.getElementById("Layout_button").style.display = "block";
+          }
+          function hidebutton() {
+              document.getElementById("Layout_button").style.display = "none";
+          }
+      </script>
+     
+      <div class="base" id="header">   <!-- id="header" Center Vertically - Using padding -->       
           <h2 class="hd">退休大叔的學習筆記</h2>  
           <h3 class="hd">于 2021.10 月</h3>   <!-- Right Align :class="hd_float" 使用 float -->
       </div>                                  <!-- Right Align :class="hd" 使用 position -->
@@ -47,25 +56,43 @@
 
      <div class="main row" id="HTML&CSS">
         <div class="column left">
-            在學習中完成下列的練習, 
+            <h3> HTML & CSS </h3>
+            <strong> 在學習中完成下列的練習: </strong>
             <br>
-            <strong> 點擊連結可在新頁面顯示 :</strong>
             <ul class="sidebar">
-               <li> iframe & sandbox </li>
-               <li><a href="./layout_1.html" target="right_ifm"> about CSS Layout</a></li>
+               <li><a onclick="showbutton()" href="./layout_1.html" target="right_ifm"> 
+                      &nbsp;CSS Layout&nbsp; </a>
+               </li>
+               <li><a onclick="hidebutton()" href="./img/iframe_sandbox.png" target="right_ifm"> 
+                        &nbsp;iframe_sandbox&nbsp; </a>
+               </li>
                <li> position_float </li>
                <li> selector </li>
                <li> dropdown menu </li>
                <li> Media queries </li>
             </ul>
+            <br>
+            <br>
+            <div class="newpage" id="Layout_button">
+                  <b> 點擊連結可在新頁面顯示 :<b> <br>
+                  <b> Open content in new page </b>
+                  <br> 
+                  <a href="./layout_1.html" class="button" target="_blank" > Layout(一) </a> 
+                  <br>
+                  <a href="./layout_2.html" class="button" target="_blank" > Layout(二) </a> 
+            </div>
         </div>
 
         <div class="column right">
-           <h3> HTML&CSS </h3>
-           <p> <h3>注意事項：</h3> 
-               <iframe name="right_ifm" width="100%" height="80%" frameborder="0"></iframe>
-           </p>
-           <br>
+            <!--
+           <h3 style="display: inline;"> Open content in new page = => </h3> 
+           <a href="./layout_1.html" class="button" target="_blank" > Layout(一) </a> 
+           <a href="./layout_2.html" class="button" target="_blank" > Layout(二) </a> 
+           -->
+           
+               <iframe sandbox="allow-same-origin allow-popups" src="./img/layout/child_pray02.png" 
+                       name="right_ifm" frameborder="0"> content not find
+                </iframe>
         </div> 
      </div> 
 
@@ -78,11 +105,12 @@
             <p> </p>
                <h2> Sorry under construction </h2>
                <h2 style="color: black;"> 尚待建構中。。。</h2> 
-               <h2> <mark class="red"> Coming soon。。。</mark></h2> 
+               <h3> <mark class="red"> Coming soon。。。</mark></h3> 
+                <a href="#header" class="button"> To the top </a>
         </div> 
      </div> 
 
-      <div class="base" id="footer2">
+      <div class="base" id="footer">
           <h5 style="margin: 0px; padding: 15px; color: brown;">&copy;copyright 2021 退休大叔的學習筆記</h5>
       </div>
 
