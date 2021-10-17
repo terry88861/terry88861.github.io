@@ -1,0 +1,166 @@
+<html>
+  <head>
+    <title>CSS 初學者課程 for Media Query </title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Terry Wang">
+    <link rel="stylesheet" href="./Css/layout.css"> 
+    <link rel="stylesheet" media="(max-width: 700px)" href="./Css/layout_media.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+    </style>
+  </head>
+    
+  <body>                                     <!-- id="header" Center Vertically - Using padding -->
+      <div class="base" id="header">         
+          <h2 class="hd">退休大叔的學習筆記 - about Media Query  </h2>  
+          <h3 class="hd">于 2021.10 月</h3>   <!-- Right Align :class="hd_float" 使用 float -->
+      </div>                                  <!-- Right Align :class="hd" 使用 position -->
+
+      <!--  Center Vertically - Using transform -- 
+          <div class="base" id="header_transY" >   
+              <h2 >退休大叔的學習筆記 Y about CSS Layout (二) </h2>  
+              <h3 class="hd">于 2021.09 月</h3>     -- <h3 class="hd_float"> --
+          </div>
+      -->
+      <!--  Center Vertically - Using transform -- 
+          <div class="base" id="header_transXY" >    
+              <h2 >退休大叔的學習筆記 XY about CSS Layout (二) </h2>  
+              <h3 class="hd_float">于 2021.09 月</h3>    -- <h3 class="hd_float"> -- 
+          </div>
+      -->
+
+                            <!--  設定 #nav-bar2 之 UL使用相同的 base class -->       
+      <div id="nav-bar2" >  <!--  但取消了 height 限定 --> 
+          <ul class="base">
+              <li><a href="#header" title="go to the top of this page"> Home </a></li>
+              <li><a href="#bar_buttons" title="go to the Navigation bar and buttons section"> 
+                     Buttons </a>
+              </li>
+              <li><a href="#wk_header" title="go to the Working in the header section">Header</a>
+              </li>
+              <li><a href="#wk_footer" title="go to the Working in the footer section">Footer</a>
+              </li>
+              <li><a href="./layout_1.html" title="back to CSS Layout (一)..."  target="_self">
+                     Previous</a>
+              </li>
+
+          </ul>
+      </div>
+
+      <div class="main">    <!-- 本文主旨與學習資源 -->
+          <h3>本文主旨與學習資源</h3>
+          <p> 本文的主要目標是說明如何運用 <mark class="red">Media Queries</mark> CSS style 
+              property 屬性，來因應使用者在各種<mark>不同螢幕大小的終端設備</mark>( 例如: 桌機，筆電，平板，手機等 )開啟你的網頁時，而引發需要對網頁中的元素或佈局所做的調整。如果你想達到當使用者<mark class="red">改變瀏覽器 browser size 大小</mark>時，網頁中的元素或佈局能隨之調整，你可以運用 Media Queries 來進行設計。
+               <br>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Today people are using <strong>all sorts of devices that have different resolutions</strong> you have people using desktops, laptops, tablets and mobile phones and basically what this means is <mark>your webpage has to fit on all these devices</mark>.
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So you want to make sure that your webpage is a <mark class="red">one size fits all</mark> and <mark>you can do that with CSS media queries</mark>. 如下圖所示：
+              <br>
+              <br>
+              <img src=".\img\MediaQy\media_A00.png" alt="media_A00.png files not found" >
+              <img src=".\img\MediaQy\media_A03.png" alt="media_A03.png files not found" >
+          </p>
+
+          <p>
+              本文大部分的圖文是從 from youtuber：<a href="https://www.youtube.com/channel/UC-JQzTHQrVA8j-tamvy66fw" title="Go to see EJ Media's videos on youtube" target="_blank" style="color: red;"> <em><b>EJ Media</b></em></a> 的 <strong>CSS Layout Tutorial -  Media Queries</strong> serial videos 截錄下來的，以下是這些視頻的連接 link ：
+          </p>
+                                   <!--   <div class="row"  >  -->
+          <div class="list">       <!--   Tutorial serial videos from  EJ Media's -->
+              <ul class="list column sidebar">
+                  <li><a href="https://www.youtube.com/watch?v=3SFRSrPDwiw&list=PLr6-GrHUlVf_HUfo4LyFepGmj23nwqNdk&index=110" target="_blank"> Layout Tutorial - 20 - Media queries </a></li>
+                  <li><a href="https://www.youtube.com/watch?v=1DtH6icymR8&list=PLr6-GrHUlVf_HUfo4LyFepGmj23nwqNdk&index=111" target="_blank"> Layout Tutorial - 21 - Media queries Part 2 </a></li>
+             
+              </ul>
+              <ul class="list column sidebar">
+                  <li><a href="https://www.youtube.com/watch?v=xEyerXP2UF8&list=PLr6-GrHUlVf_HUfo4LyFepGmj23nwqNdk&index=112" target="_blank"> Layout Tutorial - 22 - Media queries Part 3 </a></li>
+                  <li><a href="https://www.youtube.com/watch?v=9_ffVe4d6e4&list=PLr6-GrHUlVf_HUfo4LyFepGmj23nwqNdk&index=113" target="_blank"> Layout Tutorial - 23 - Media queries Part 4 </a></li>
+              </ul>
+          </div>
+      </div>
+
+    <!-- Navigation bar and buttons
+      <div class="main" id="bar_buttons">   
+          <h3>Navigation bar and buttons</h3>
+          <p> <h3>注意事項：</h3>
+               <dl>
+                   <dt> &lt;ul&gt; & &lt;li&gt; elements : </dt>
+                      <dd>
+                      </dd>
+                      <br>
+
+                   <dt> list-style-type property : </dt>
+                      <dd>
+                      </dd>
+                      <br>
+
+                   <dt> text-align property : </dt>
+                      <dd>
+                      </dd>
+                      <br>
+
+                   <dt> display property : </dt>
+                      <dd>
+                      </dd>
+                      <br>
+               </dl>
+          </p>
+          <br>
+
+          <p>
+              We're going to <mark>add some buttons to our navigation bar</mark>, so the first thing we want to <strong>start out with is HTML</strong>. 
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We start out with a unordered list element, and close it out and then we put <mark>a list item &lt;li&gt; element inside the unordered list &lt;ul&gt; element</mark>. what we want to do is <mark class="red">to make each one of our list item elements as a button</mark> and then let’s get to the CSS portion of this, we will style each one of these buttons.
+              <br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So right now <mark>this is just the raw HTML</mark> and we'll put in an href later when we get to master and content pages. so for now we're just going to keep that empty. we're just going <mark class="red">to have the name of the button</mark> which in this case is just going <strong>to be the home button</strong>.
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So let's go ahead and <strong>make a few more buttons</strong> so what else do we want ? well since this is a history site we want a section on ancient Greece. so let's put a section on <strong>ancient Greece</strong>, we'll have a button for that and then <strong>the ancient Rome section, the World War two section</strong>. so we'll have <mark class="red">four big historical subjects</mark>.
+          </p>
+          <img src=".\img\layout\layout_H00.png" alt="layout_H00.png files not found" >
+          <br>
+
+          <p>
+              Now we need <strong>to format all of these</strong> so that these <mark>look like they're actually buttons not just raw HTML</mark>. 
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Now we're going to replace all of the CSS code we originally had for the navbar and we will <strong>keep the margin and the border radius</strong>. I change the background color to black. &nbsp; This <mark class="red">list-style-type property gets rid of the bullet points</mark> so you need to <strong>set that to none</strong> and that gets rid of the bullet points.
+              <br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; we want <mark class="red">to Center our button, so we use the text align property</mark>. we don't want a lot of padding because <strong>I want the buttons right near the edge of our navbar</strong>, so I just a small amount of padding of five pixels and we'll keep the same margin and border-radius. We got buttons in our navbar now. 
+          </p>
+          <img src=".\img\layout\layout_H03.png" alt="layout_H03.png files not found" >
+          <br>
+
+          <p>
+              Of course we need to style these. &nbsp; Now <strong>the first thing we need to do now is </strong><mark class="red">to get these buttons to display side by side</mark>. We do not want them at a top down order and <strong>these &lt;li&gt; are being treated as block elements</strong>. We want these to be displayed side by side so <mark class="red">we need to create a new rule to switch these elements to inline elements</mark>. 
+            <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We will put an list item &lt;li&gt; element here and we're just going to use one rule for this, we're going <mark>to set this display property to inline</mark>. okay you will see now that the buttons are displayed side by side.
+              <br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Now a couple of things that you might ask, <strong>why didn't we just style the nav bar div itself ? &nbsp; Why are we styling the UL element</strong> and that's because I only want the box model. <strong>Remember the CSS boxes</strong>, <mark> I only want that for the UL </mark><mark class="red">because I want the buttons to size right to the edge of the element</mark>.
+              <br> 
+          </p>
+
+          <p>
+              Now one more point here, of course with this rule set we are styling the list &lt;li&gt; element but <mark class="red">it's good practice to put the path towards that list element</mark>, <strong>in this case it's the UL. &nbsp; So we start with the #navbar id selector</strong>, <mark>of course we need that but we don't necessarily have to put the UL there</mark>, we could have just put the li element and we would have got same results but it's good practice to put this in. &nbsp; So you know<mark class="red"> the path from the navbar to the UL to the list item &lt;li&gt;element</mark>.
+            
+          </p>
+          <img src=".\img\layout\layout_H09.png" alt="layout_H09.png files not found" >
+      </div>
+    --> 
+    
+
+
+      <div class="base" id="footer2">
+          <ul>
+              <li><a href="#header" title="go to the top of this page"> Home </a></li>
+              <li><a href="">Help</a></li>
+              <li><a href="">Contact us</a></li>
+              <li><a href="">Next</a></li>
+              <li><a href="">About author</a></li>
+              <li><a href="./layout_1.html" title="back to CSS Layout (一)..."  target="_self">
+                Previous</a></li>
+          </ul>
+          <h5 style="margin: 0px; padding-bottom: 10px; color: brown;">&copy;copyright 2021 退休大叔的學習筆記</h5>
+      </div>
+
+  </body>
+</html> 

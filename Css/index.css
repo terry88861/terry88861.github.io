@@ -105,8 +105,8 @@ h3 {
    }
 
 iframe {
-  width: 100% ;
   height: 600px ;
+  width: 100%;
 }
 
 ul.sidebar{
@@ -270,6 +270,9 @@ mark.red {
       padding: 5px;
       margin: 2px;
       display: none;
+      text-align: center;
+
+    /*  display: inline-block; */
     }
        
 .column.right {
@@ -331,11 +334,25 @@ mark.red {
         width: 100%;
     }
     #construction div.column.left {
-      width: 100%;
-   }
-   #construction div.column.right {
-      width: 100%;
-   }
+        width: 100%;
+    }
+    #construction div.column.right {
+        width: 100%;
+    }
+
+    #HTMLCSS div.column.left ul.sidebar {
+        display: inline-block;
+        margin-left: 5%;
+        margin-right: 5% ;
+    }
+   
+    #HTMLCSS div.column.left div.newpage {
+        margin-left: 50px;
+        margin-right: 10px;
+        vertical-align:top ;
+    }
+   
+
 }
 
 /* --- Responsive layout - 
